@@ -12,14 +12,16 @@ void error_callback(int error, const char *description) {
 int main() {
     glfwSetErrorCallback(error_callback);
 
-    glfwInit();
+    if (!glfwInit())
+        exit(EXIT_FAILURE);
+
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
     GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Hello!", NULL, NULL);
 
     if (!window) {
         glfwTerminate();
-        return -1;
+        exit(EXIT_FAILURE);
     }
 
     while (!glfwWindowShouldClose(window)) {
