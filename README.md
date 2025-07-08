@@ -4,21 +4,16 @@
 
 This README provides instructions on how to build and run the application.
 
-## Building the Application
+## Building and Running the Application
 
 To build the application, follow these steps:
 
-1.  **Create a build directory and navigate to it:**
+1.  **Build using build.py**
     ```bash
-    mkdir build
-    cd build
+    python3 build.py
     ```
-2.  **Run CMake to configure the project:**
+    This will create a build system, compile the source code and create the executable.
+2.  **Run the app**
     ```bash
-    cmake ..
+    ./build/glfw_hello
     ```
-1.  **Build the project:** While still inside the `build` directory, execute the build command.
-    ```bash
-    cmake --build .
-    ```
-    This will compile the source code and create the executable.

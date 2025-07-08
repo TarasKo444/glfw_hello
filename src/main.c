@@ -1,6 +1,6 @@
 #include "GLFW/glfw3.h"
 #include "stdio.h"
-#include <windows.h>
+#include "stdlib.h"
 
 #define WIDTH 800
 #define HEIGHT 600
